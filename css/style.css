@@ -84,7 +84,7 @@ h3{
     padding: 1rem 0;
     display: flex;
     justify-content: center;
-    gap: 1rem; /*Espacio de los textos*/
+    gap: 2rem; /*Espacio de los textos*/
 }
 
 .navegacion__enlace{
@@ -98,4 +98,39 @@ h3{
 .navegacion__enlace--activo,
 .navegacion__enlace:hover{
     color: var(--secundario);
+}
+
+/** Grid **/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem
+}
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/** Producto **/
+.producto {
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+}
+
+.producto__imagen{
+    width: 100%    /*La imagen se adapta cuando la ventana cambie de tamaño*/
+}
+.producto__nombre {
+    font-size: 4rem;
+}
+.producto__precio {
+    font-size: 2.8rem;
+    color: var(--secundario)
+}
+
+.producto__nombre,
+.producto__precio{
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;  /**El texto se centra horizontal**/
 }
